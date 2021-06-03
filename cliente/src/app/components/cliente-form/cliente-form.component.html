@@ -1,0 +1,46 @@
+<div class="my-4">
+    <h1 class="col text-center">Agregar un nuevo Cliente</h1>
+</div>
+<div class="col-md-4 offset-md-4 m-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="identificacion">Identificacion</label>
+                    <input id="identificacion" type="number" [(ngModel)]="cliente.Identificacion" name="Identificacion" placeholder="Identificacion" class="form-control" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="Nombre" [(ngModel)]="cliente.Nombre" placeholder="Nombre" class="form-control" required >
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input id="telefono" type="text" name="Telefono" [(ngModel)]="cliente.Telefono" placeholder="Telefono" class="form-control" required >
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input id="correo" type="email" name="Correo" [(ngModel)]="cliente.Correo" placeholder="Correo" class="form-control" required >
+                </div>
+                <div class="form-group">
+                    <label for="numeroTarjeta">numero de la Tarjeta</label>
+                    <input id="numeroTarjeta" type="number" name="Numero_tarjeta" [(ngModel)]="cliente.Numero_tarjeta" placeholder="Numero de la tarjeta" class="form-control" required >
+                </div>
+                <div class="form-group">
+                    <label for="Saldo_tarjeta">Saldo de la tarjeta</label>
+                    <input id="Saldo_tarjeta" type="number" name="Saldo_tarjeta" [(ngModel)]="cliente.Saldo_tarjeta" placeholder="Saldo de la tarjeta" class="form-control"  required>
+                </div>
+                <div class="form-group">
+                    <label for="numero_cuenta">Numero de la cuenta</label>
+                    <input id="numero_cuenta" type="number" name="Numero_cuenta" [(ngModel)]="cliente.Numero_cuenta" placeholder="Numero de la cuenta" class="form-control" required >
+                </div>
+                <div class="form-group">
+                    <label for="saldo_cuenta">Saldo de la cuenta</label>
+                    <input id="saldo_cuenta" type="number" name="Saldo_cuenta" [(ngModel)]="cliente.Saldo_cuenta" placeholder="Saldo de la cuenta" class="form-control" required >
+                </div>
+                <button class="btn btn-success btn-block my-2 col-md-12" (click)="edit ? update() :save()"> Guardar
+
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

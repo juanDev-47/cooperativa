@@ -1,0 +1,32 @@
+<div class="col-md-12 ">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item ">Identificacion</li>
+        <li class="list-group-item col-md-2 text-center">Nombre</li>
+        <li class="list-group-item col-md-1 px-2 text-center">Telefono</li>
+        <li class="list-group-item col-md-2 text-center">Correo</li>
+        <li class="list-group-item col-md-2 text-center">Numero de tarjeta</li>
+        <li class="list-group-item col-md-1 text-center">saldo de la tarjeta</li>
+        <li class="list-group-item col-md-2 text-center">Numero de la cuenta</li>
+        <li class="list-group-item col-md-1 text-center">Saldo de la cuenta</li>
+      </ul>
+</div>
+<hr>
+<div class="col-md-12 my-3" *ngFor="let cliente of clientes">
+    <ul class="list-group list-group-horizontal mb-3">
+        <li class="list-group-item col-md-1 px-2">{{cliente.Identificacion}}</li>
+        <li class="list-group-item col-md-2">{{cliente.Nombre}}</li>
+        <li class="list-group-item ">{{cliente.Telefono}}</li>
+        <li class="list-group-item col-md-2">{{cliente.Correo}}</li>
+        <li class="list-group-item col-md-2">{{cliente.Numero_tarjeta}}</li>
+        <li class="list-group-item col-md-1">$ {{cliente.Saldo_tarjeta}}</li>
+        <li class="list-group-item col-md-2">{{cliente.Numero_cuenta}}</li>
+        <li class="list-group-item col-md-1">$ {{cliente.Saldo_cuenta}}</li>        
+    </ul>    
+    <div class="col-md-12">
+        <a  class="btn btn-info btn-block col-md-2" [routerLink]="['/clientes/edit', cliente.Identificacion]">Editar Cliente</a>
+        <button class="btn btn-danger col-md-2 mx-2" (click)="delete(cliente.Identificacion)">
+            <i class="far fa-trash-alt"></i>
+        </button>
+    </div>
+    <hr>
+</div>
