@@ -50,7 +50,7 @@ class ClienteController {
         const {id} = req.params;
         await pool.query('DELETE FROM clientes WHERE Identificacion = ?', [id]);
 
-        res.json({delete: 'eliminando un juego'});
+        res.json({delete: 'eliminando un Cliente'});
     }
 
     public async update (req: Request, res: Response){

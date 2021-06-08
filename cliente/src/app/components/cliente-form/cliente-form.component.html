@@ -7,35 +7,35 @@
             <form action="">
                 <div class="form-group">
                     <label for="identificacion">Identificacion</label>
-                    <input id="identificacion" type="number" [(ngModel)]="cliente.Identificacion" name="Identificacion" placeholder="Identificacion" class="form-control" autofocus required>
+                    <input id="identificacion" type="number" [(ngModel)]="cliente.Identificacion" name="Identificacion"  placeholder="Identificacion" class="form-control " required min="100000" max="9999999999" title="Verifique su identificacion" >
                 </div>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input id="nombre" type="text" name="Nombre" [(ngModel)]="cliente.Nombre" placeholder="Nombre" class="form-control" required >
+                    <input id="nombre" type="text" name="Nombre" [(ngModel)]="cliente.Nombre" placeholder="Nombre" class="form-control" required  minlength="3" maxlength="30" pattern="[A-Za-z ]+">
                 </div>
                 <div class="form-group">
                     <label for="telefono">Telefono</label>
-                    <input id="telefono" type="text" name="Telefono" [(ngModel)]="cliente.Telefono" placeholder="Telefono" class="form-control" required >
+                    <input id="telefono" type="text" name="Telefono" [(ngModel)]="cliente.Telefono" placeholder="Telefono" class="form-control" required minlength="10" maxlength="10" pattern="[0-9]+">
                 </div>
                 <div class="form-group">
                     <label for="correo">Correo</label>
-                    <input id="correo" type="email" name="Correo" [(ngModel)]="cliente.Correo" placeholder="Correo" class="form-control" required >
+                    <input id="correo" type="email" name="Correo" [(ngModel)]="cliente.Correo" placeholder="Correo" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="numeroTarjeta">numero de la Tarjeta</label>
-                    <input id="numeroTarjeta" type="number" name="Numero_tarjeta" [(ngModel)]="cliente.Numero_tarjeta" placeholder="Numero de la tarjeta" class="form-control" required >
+                    <input id="numeroTarjeta" type="number" name="Numero_tarjeta" [(ngModel)]="cliente.Numero_tarjeta" placeholder="Numero de la tarjeta" class="form-control"  min="1000000000" max="9999999999" pattern="[0-9]+" required >
                 </div>
                 <div class="form-group">
                     <label for="Saldo_tarjeta">Saldo de la tarjeta</label>
-                    <input id="Saldo_tarjeta" type="number" name="Saldo_tarjeta" [(ngModel)]="cliente.Saldo_tarjeta" placeholder="Saldo de la tarjeta" class="form-control"  required>
+                    <input id="Saldo_tarjeta" type="number" name="Saldo_tarjeta" [(ngModel)]="cliente.Saldo_tarjeta" placeholder="Saldo de la tarjeta" min="10000" max="99999999" pattern="[0-9]+" required  class="form-control" >
                 </div>
                 <div class="form-group">
                     <label for="numero_cuenta">Numero de la cuenta</label>
-                    <input id="numero_cuenta" type="number" name="Numero_cuenta" [(ngModel)]="cliente.Numero_cuenta" placeholder="Numero de la cuenta" class="form-control" required >
+                    <input id="numero_cuenta" type="number" name="Numero_cuenta" [(ngModel)]="cliente.Numero_cuenta" placeholder="Numero de la cuenta" class="form-control" min="1000000000" max="9999999999" pattern="[0-9]+" required >
                 </div>
                 <div class="form-group">
                     <label for="saldo_cuenta">Saldo de la cuenta</label>
-                    <input id="saldo_cuenta" type="number" name="Saldo_cuenta" [(ngModel)]="cliente.Saldo_cuenta" placeholder="Saldo de la cuenta" class="form-control" required >
+                    <input id="saldo_cuenta" type="number" name="Saldo_cuenta" [(ngModel)]="cliente.Saldo_cuenta" placeholder="Saldo de la cuenta" min="10000" pattern="[0-9]+" class="form-control" required >
                 </div>
                 <button class="btn btn-success btn-block my-2 col-md-12" (click)="edit ? update() :save()"> Guardar
 

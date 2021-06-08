@@ -1,0 +1,9 @@
+input:valid,
+textarea:valid {
+    border: rgb(131, 199, 131) 3px solid ;
+}
+
+input:invalid,
+textarea:invalid {
+    border:  rgb(199, 67, 67) 3px solid;
+}
